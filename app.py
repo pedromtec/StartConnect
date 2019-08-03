@@ -10,8 +10,8 @@ def play():
     try:
         coluna, score = minimax.get_best_move(request.json['board'])
     except:
-        coluna = -1
+        coluna = None
     return jsonify({'coluna': coluna})
 
 if __name__ == '__main__':
-  app.run(debug=True, port=5328)
+  app.run(debug=True)
